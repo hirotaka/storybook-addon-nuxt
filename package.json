@@ -29,18 +29,17 @@
   ],
   "scripts": {
     "watch": "tsc --watch",
-    "build": "yarn clean && tsc",
+    "build": "npm run clean && tsc",
     "clean": "tsc --build --clean",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
-    "format:all": "yarn format .",
+    "format:all": "npm run format .",
     "lint": "eslint --fix",
-    "lint:all": "yarn lint .",
-    "test:all": "yarn lint:all && yarn type-check",
-    "prepublishOnly": "yarn build",
+    "lint:all": "npm run lint .",
+    "test:all": "npm run lint:all && npm run type-check",
+    "prepublishOnly": "npm run build",
     "release": "semantic-release",
-    "prepack": "yarn build",
-    "semantic-release": "semantic-release"
+    "prepack": "npm run build"
   },
   "dependencies": {
     "loader-utils": "^3.2.1",
