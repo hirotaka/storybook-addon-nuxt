@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-nuxt",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "author": "hirotaka",
   "license": "MIT",
   "description": "A no config Storybook addon that makes nuxtjs features just work in Storybook",
@@ -38,7 +38,8 @@
     "test:all": "yarn lint:all && yarn type-check",
     "prepublishOnly": "yarn build",
     "release": "semantic-release",
-    "prepack": "yarn build"
+    "prepack": "yarn build",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "loader-utils": "^3.2.1",
