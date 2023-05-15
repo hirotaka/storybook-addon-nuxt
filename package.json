@@ -24,7 +24,8 @@
   },
   "main": "dist/preset.js",
   "files": [
-    "dist"
+    "dist",
+    "runtime"
   ],
   "scripts": {
     "watch": "tsc --watch",
