@@ -1,0 +1,79 @@
+{
+  "name": "storybook-addon-nuxt",
+  "version": "1.0.0",
+  "author": "hirotaka",
+  "license": "MIT",
+  "description": "A no config Storybook addon that makes nuxtjs features just work in Storybook",
+  "keywords": [
+    "storybook",
+    "addon",
+    "nuxt",
+    "nuxtjs"
+  ],
+  "homepage": "https://github.com/hirotaka/storybook-addon-nuxt#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hirotaka/storybook-addon-nuxt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hirotaka/storybook-addon-nuxt/issues"
+  },
+  "storybook": {
+    "displayName": "nuxt + Storybook",
+    "icon": "https://camo.githubusercontent.com/92ec9eb7eeab7db4f5919e3205918918c42e6772562afb4112a2909c1aaaa875/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313630373535343338352f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6c6f676f2e706e67"
+  },
+  "main": "dist/preset.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "yarn clean && tsc",
+    "clean": "tsc --build --clean",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "format:all": "yarn format .",
+    "lint": "eslint --fix",
+    "lint:all": "yarn lint .",
+    "test:all": "yarn lint:all && yarn type-check",
+    "prepublishOnly": "yarn build",
+    "release": "semantic-release",
+    "prepack": "yarn build"
+  },
+  "dependencies": {
+    "loader-utils": "^3.2.1",
+    "resolve-url-loader": "^5.0.0",
+    "semver": "^7.3.8",
+    "tsconfig-paths": "^4.1.2",
+    "tsconfig-paths-webpack-plugin": "^4.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^7.0.11",
+    "@storybook/addons": "^7.0.11",
+    "@storybook/core-common": "^7.0.11",
+    "@storybook/vue3-vite": "^7.0.11",
+    "@types/loader-utils": "^2.0.3",
+    "@types/react": "^18.0.28",
+    "@types/semver": "^7.3.13",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-typescript": "^3.0.0",
+    "lint-staged": "^13.1.2",
+    "nuxt": "^3.4.3",
+    "prettier": "^2.8.4",
+    "react": "^18.2.0",
+    "semantic-release": "^21.0.2",
+    "ts-jest": "^29.0.5",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "@storybook/addon-actions": "^7.0.0",
+    "@storybook/addons": "^7.0.0",
+    "nuxt": "^3.0.0",
+    "vue": "^3.0.0"
+  }
+}
