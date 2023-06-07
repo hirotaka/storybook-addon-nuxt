@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "typescript",
+    "prettier"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": ["warn", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
+    "no-console": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/explicit-module-boundary-types": "error",
+        "@typescript-eslint/no-empty-function": "off"
+      }
+    }
+  ]
+}

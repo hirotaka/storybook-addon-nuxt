@@ -100,12 +100,10 @@ async function useNuxtViteConfig() {
           }
         });
         nuxt.hook('vite:extendConfig', (config, { isClient }) => {
-          // @ts-ignore
           if (isClient) {
             for (const name in vuePlugins) {
               if (!config.plugins?.some((p) => (p as any)?.name === name)) {
                 const [plugin, key] = vuePlugins[name as keyof typeof vuePlugins];
-                // @ts-ignore
                 config.plugins.push(plugin(config[key]));
               }
             }
