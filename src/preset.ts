@@ -46,7 +46,7 @@ async function useNuxtViteConfig() {
   const nuxt = await loadNuxt({
     // cwd: process.cwd(),
     ready: false,
-    dev: true,
+    dev: process.env.NODE_ENV === 'development',
     overrides: {
       ssr: false,
       app: {
