@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '~/assets/header.css';
+import '~/assets/header.css'
 
 type Props = {
   user?: {
@@ -10,8 +10,8 @@ type Emit = {
   (event: 'login' | 'logout' | 'createAccount'): void;
 };
 
-defineProps<Props>();
-defineEmits<Emit>();
+defineProps<Props>()
+defineEmits<Emit>()
 </script>
 
 <template>
@@ -37,18 +37,18 @@ defineEmits<Emit>();
         <h1>Acme</h1>
       </div>
       <div>
-        <span class="welcome" v-if="user"
-          >Welcome, <b>{{ user.name }}</b
-          >!</span
-        >
-        <BaseButton size="small" @click="$emit('logout')" label="Log out" v-if="user" />
-        <BaseButton size="small" @click="$emit('login')" label="Log in" v-if="!user" />
+        <span
+          v-if="user"
+          class="welcome"
+        >Welcome, <b>{{ user.name }}</b>!</span>
+        <BaseButton v-if="user" size="small" label="Log out" @click="$emit('logout')" />
+        <BaseButton v-if="!user" size="small" label="Log in" @click="$emit('login')" />
         <BaseButton
+          v-if="!user"
           primary
           size="small"
-          @click="$emit('createAccount')"
           label="Sign up"
-          v-if="!user"
+          @click="$emit('createAccount')"
         />
       </div>
     </div>
