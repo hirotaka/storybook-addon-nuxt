@@ -1,46 +1,46 @@
-import TheHeader from '~/components/TheHeader.vue';
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3'
+import TheHeader from '~/components/TheHeader.vue'
 
 const meta: Meta<typeof TheHeader> = {
   title: 'Example/TheHeader',
   component: TheHeader,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
-  render: (args) => ({
+  render: args => ({
     // Components used in your story `template` are defined in the `components` object
     components: {
-      TheHeader,
+      TheHeader
     },
     // The story's `args` need to be mapped into the template through the `setup()` method
-    setup() {
+    setup () {
       // Story args can be spread into the returned object
       return {
-        ...args,
-      };
+        ...args
+      }
     },
     // Then, the spread values can be accessed directly in the template
-    template: '<the-header :user="user" />',
+    template: '<the-header :user="user" />'
   }),
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/vue/configure/story-layout
-    layout: 'fullscreen',
-  },
-};
+    layout: 'fullscreen'
+  }
+}
 
-export default meta;
+export default meta
 
 type Story = StoryObj<typeof TheHeader>;
 
 export const LoggedIn: Story = {
   args: {
     user: {
-      name: 'Jane Doe',
-    },
-  },
-};
+      name: 'Jane Doe'
+    }
+  }
+}
 
 export const LoggedOut: Story = {
   args: {
-    user: null,
-  },
-};
+    user: null
+  }
+}
