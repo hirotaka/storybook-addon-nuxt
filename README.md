@@ -43,6 +43,12 @@ Or yarn:
 yarn add --dev storybook-addon-nuxt
 ```
 
+Or pnpm:
+
+```
+pnpm dlx storybook@latest init --type vue3 --builder vite
+```
+
 Register the Addon in main.js
 
 ```
