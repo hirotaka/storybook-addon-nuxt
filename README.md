@@ -28,7 +28,11 @@ First setup Storybook.
 In your Nuxt project directory:
 
 ```
+# With npm
 npx storybook@latest init --type vue3 --builder vite
+
+# With pnpm
+pnpm dlx storybook@latest init --type vue3 --builder vite
 ```
 
 Install storybook-addon-nuxt using npm:
@@ -41,6 +45,12 @@ Or yarn:
 
 ```
 yarn add --dev storybook-addon-nuxt
+```
+
+Or pnpm:
+
+```
+pnpm add --dev storybook-addon-nuxt
 ```
 
 Register the Addon in main.js
