@@ -31,6 +31,9 @@ export const viteFinal: StorybookConfig['viteFinal'] = async (config) => {
       optimizeDeps: viteConfig.optimizeDeps,
       plugins: viteConfig.plugins,
       define: viteConfig.define,
+      css: {
+        postcss: viteConfig.css?.postcss,
+      },
     },
     config
   );
