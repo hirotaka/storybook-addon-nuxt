@@ -1,6 +1,7 @@
 {
   "name": "storybook-addon-nuxt",
   "version": "0.0.0-development",
+  "type": "module",
   "author": "hirotaka",
   "license": "MIT",
   "description": "A no config Storybook addon that makes nuxtjs features just work in Storybook",
