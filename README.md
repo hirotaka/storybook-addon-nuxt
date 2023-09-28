@@ -1,3 +1,7 @@
+> **Note** \
+> To use Storybook with Nuxt3, please use the nuxt-modules repository. \
+> https://github.com/nuxt-modules/storybook
+
 # Storybook Addon Nuxt
 
 This add-on makes it easier to set up Storybook in your Nuxt3 project.
