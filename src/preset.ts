@@ -75,7 +75,7 @@ async function useNuxtViteConfig() {
   });
 
   nuxt.hook('imports:sources', (presets) => {
-    const stubbedComposables = ['useNuxtApp'];
+    const stubbedComposables = ['useNuxtApp', 'useRoute'];
     const appPreset = presets.find((p) => p.from === '#app');
     if (appPreset) {
       appPreset.imports = appPreset.imports.filter(
